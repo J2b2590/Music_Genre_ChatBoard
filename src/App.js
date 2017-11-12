@@ -14,26 +14,12 @@ class App extends Component {
       username: ''
     }
   }
-LoginUser = (username) =>{
-  const state = this.state;
-  state.logged = !state.logged;
-  state.currentUser = username;
-
-  this.setState(state);
-}
-
-
-
-
-
-
-
 
 
   render() {
     return (
       <div className="App">
-       <Login LoginUser={this.LoginUser}/>
+       <Login />
       </div>
     );
   }
