@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Login from './Login/Login.js';
 import './App.css';
+import ChatRoom from './Chatroom/Chatroom.js'
+import ChatBoard from './ChatBoard/ChatBoard.js'
+import Rooms from './Rooms/Rooms.js'
+
 
 class App extends Component {
 
@@ -14,26 +18,15 @@ class App extends Component {
       username: ''
     }
   }
-LoginUser = (username) =>{
-  const state = this.state;
-  state.logged = !state.logged;
-  state.currentUser = username;
-
-  this.setState(state);
-}
-
-
-
-
-
-
-
 
 
   render() {
     return (
       <div className="App">
-       <Login LoginUser={this.LoginUser}/>
+       <Login />
+       <ChatRoom/>
+       <ChatBoard/>
+       <Rooms/>
       </div>
     );
   }
