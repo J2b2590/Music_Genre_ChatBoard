@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Login from './Login/Login.js';
 import './App.css';
 
+
 class App extends Component {
 
   constructor(){
@@ -33,7 +34,7 @@ LoginUser = (username) =>{
   render() {
     return (
       <div className="App">
-       <Login LoginUser={this.LoginUser}/>
+        <Login LoginUser={this.LoginUser}/>
       </div>
     );
   }
