@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 
-class ChatBoard extends Component{
+export class ChatBoard extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			messageValue: ''
+
+		}
+	}
+
 
 	render(){
 		return(
-		<div>"I am the Chat Board"</div>
+		<div>"I am the Chat Board where you type the messages"</div>
 			)
 	}
 }
 
-export default ChatBoard;

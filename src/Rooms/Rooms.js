@@ -20,6 +20,9 @@ export class Rooms extends Component{
 			this.setState(state)
 		})
 	}
+	// joinRoom =(e)=>{
+	// 	socket.emit('join room', e.target.innerText)
+	// }
 
 	
 
@@ -30,6 +33,9 @@ export class Rooms extends Component{
 
 			return <li key={i}> {room.room} </li>
 		})
+		//onClick={this.joinRoom}-----this goes in <li key={i} onClick={this.joinRoom}>
+
+		//
 
 
 
