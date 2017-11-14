@@ -4,7 +4,7 @@ import './App.css';
 import {socket} from './index.js';
 import ChatRoom from './Chatroom/Chatroom.js';
 import ChatBoard from './ChatBoard/ChatBoard.js';
-import Rooms from './Rooms/Rooms.js';
+import {Rooms} from './Rooms/Rooms.js';
 
 
 
