@@ -1,22 +1,43 @@
 import React, { Component } from 'react';
+import {socket} from "../index.js";
 
 export class Login extends Component {
 
-	Login = (e) => {
-		 console.log(e.key, e.keyCode, e.charCode)
-	    if(e.key === 'Enter'){
-	      // send the e.target.value to the are App component in order to change the state
-	      this.props.login(e.target.value)
-	           console.log(e.target.value)
+	constructor(props){
+		super(props)
+		this.state ={
+			username: ''
 		}
 	}
+
+	Login = (e) =>{
+		const state = this.state
+		state.username = e.currentTarget.value
+		this.setState(state)
+
+	}
+
+	handleSubmit = (e) =>{
+		console.log(e, 'handleSubmit')
+		e.preventDefault();
+
+		socket.emit('addUser', this.state.username)
+		this.props.UserLogin(this.state.username)
+	}
+
+	
 
 	
 	render(){
 		return(
 			<div>
 				<h5>User Name</h5>
-				<input type="text" textarea='User Name' onKey={this.Login}/>
+				<form onSubmit={this.handleSubmit}>
+
+					<input type="text" placeholder="username" onChange={this.Login} value={this.state.username}/>
+					<button>Login</button>
+
+				</form>
 			</div>
 
 

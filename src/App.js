@@ -18,10 +18,23 @@ class App extends Component {
     this.state = {
 
       logged: false,
-      currentUser: '',
-      username: ''
+      currentUser: ''
+      
     }
   }
+
+  UserLogin = (username)=>{
+    const state = this.state;
+    state.logged = !state.logged;
+    state.currentUser = username;
+
+    this.setState(state);
+
+  }
+
+
+
+
 
   componentDidMount(){
     socket.on('message', (data)=>{
@@ -34,12 +47,11 @@ class App extends Component {
     return (
       <div className="App">
 
-          <Login LoginUser={this.LoginUser}/>
+          
 
+         {this.state.logged ? <Rooms currentUser={this.state.currentUser}/> : <Login UserLogin={this.UserLogin}/>}
          
-         <ChatRoom/>
-         <ChatBoard/>
-         <Rooms/>
+         
 
       </div>
     );

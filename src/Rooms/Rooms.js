@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import {socket} from '../index.js'
 
 class Rooms extends Component{
 
 	render(){
 		return(
-		<div>"I am the  Room"</div>
+		<div>"this is rooms"</div>
 			)
 	}
 }
