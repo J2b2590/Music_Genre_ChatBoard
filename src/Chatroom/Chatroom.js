@@ -11,6 +11,7 @@ class ChatRoom extends Component{
 		}
 	}
 
+
 	onSubmit(e){
 		e.preventDefault()
 		const message = {
@@ -22,6 +23,7 @@ class ChatRoom extends Component{
 	}
 	message(e){
 		this.setState({message: e.target.value})
+		console.log(e.target,'this is message e')
 	}
 
 
@@ -40,7 +42,7 @@ class ChatRoom extends Component{
 				<ChatBoard messages={this.props.messages}/>
 			
 				<form onSubmit={this.onSubmit.bind(this)}>
-					<input onChange={this.message.bind(this)} />
+					<input value={this.state.message} onChange={this.message.bind(this)} />
 				</form>
 				<button onClick={this.props.goBack}>Back</button>
 			</div>
