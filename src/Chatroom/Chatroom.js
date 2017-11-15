@@ -5,15 +5,23 @@ import ChatBoard from '../ChatBoard/ChatBoard.js'
 class ChatRoom extends Component{
 	constructor(props){
 		super(props);
+
+		this.state = {
+			message: ''
+		}
 	}
 
 	onSubmit(e){
 		e.preventDefault()
 		const message = {
 			username: this.props.currentUser.username,
-			text: e.target.querySelector('input').value
+			text: this.state.message
 		}
+		this.setState({message: ''})
 		socket.emit("addMessage", message, this.props.room)
+	}
+	message(e){
+		this.setState({message: e.target.value})
 	}
 
 
@@ -32,7 +40,7 @@ class ChatRoom extends Component{
 				<ChatBoard messages={this.props.messages}/>
 			
 				<form onSubmit={this.onSubmit.bind(this)}>
-					<input />
+					<input onChange={this.message.bind(this)} />
 				</form>
 				<button onClick={this.props.goBack}>Back</button>
 			</div>
