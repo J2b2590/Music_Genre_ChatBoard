@@ -7,7 +7,8 @@ class ChatRoom extends Component{
 		super(props);
 
 		this.state = {
-			message: ''
+			message: '',
+
 		}
 	}
 
@@ -40,7 +41,7 @@ class ChatRoom extends Component{
 				<ChatBoard messages={this.props.messages}/>
 			
 				<form onSubmit={this.onSubmit.bind(this)}>
-					<input onChange={this.message.bind(this)} />
+					<input  onChange={this.message.bind(this)} />
 				</form>
 				<button onClick={this.props.goBack}>Back</button>
 			</div>
