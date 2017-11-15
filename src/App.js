@@ -19,18 +19,16 @@ class App extends Component {
       users: [],
       messages: [],
       logged: false,
-      currentUser: '',
+      currentUser: {},
       page: 'login'     
     }
   }
 
   UserLogin = (username)=>{
-    const state = this.state;
-    state.page = ROOMS_PAGE;
-    state.currentUser = username;
-
-    this.setState(state);
-
+    this.setState({
+      page: ROOMS_PAGE,
+      currentUser: { username: username }
+    });
   }
 
   componentDidMount(){
@@ -62,7 +60,7 @@ class App extends Component {
     }else if(this.state.page == ROOMS_PAGE){
       page = <Rooms currentUser={this.state.currentUser} joinRoom={this.joinRoom.bind(this)}/>
     }else if(this.state.page == CHATROOM_PAGE){
-      page = <ChatRoom room={this.state.currentRoom} users={this.state.users} messages={this.state.messages} />
+      page = <ChatRoom room={this.state.currentRoom} users={this.state.users} messages={this.state.messages} currentUser={this.state.currentUser}/>
     }
     return (
       <div className="App">

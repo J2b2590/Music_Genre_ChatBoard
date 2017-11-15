@@ -6,16 +6,22 @@ class ChatRoom extends Component{
 		super(props);
 	}
 
-	componentWillMount(){
-		socket.emit
+	onSubmit(e){
+		e.preventDefault()
+		const message = {
+			username: this.props.currentUser.username,
+			text: e.target.querySelector('input').value
+		}
+		socket.emit("addMessage", message, this.props.room)
 	}
+
 
 	render(){
 		const users = this.props.users.map((user, i) => {
 			return <li key={i}>{user.username}</li>
 		})
 		const messages = this.props.messages.map((message,i ) => {
-			return <div key={i}><span className="author">{message.username}</span>{message.text}</div>
+			return <div key={i}><span className="author">{message.username}: </span>{message.text}</div>
 		})
 
 		return(
@@ -27,6 +33,9 @@ class ChatRoom extends Component{
 				<div>
 					{messages}
 				</div>
+				<form onSubmit={this.onSubmit.bind(this)}>
+					<input />
+				</form>
 			</div>
 			)
 		
