@@ -10,29 +10,27 @@ export class Login extends Component {
 		}
 	}
 
-	Login = (e) =>{
-		const state = this.state
-		state.username = e.currentTarget.value
-		this.setState(state)
+	login(e){
+		this.setState({username: e.currentTarget.value})
 
 	}
 
-	handleSubmit = (e) =>{
+	handleSubmit(e){
 		e.preventDefault();
-
-		socket.emit('addUser', this.state.username)
-		this.props.UserLogin(this.state.username)
+		this.props.userLogin(this.state.username)
 	}
 	
 	render(){
 		return(
 			<div>
 				<h5>User Name</h5>
-				<form onSubmit={this.handleSubmit}>
-
-					<input type="text" placeholder="username" onChange={this.Login} value={this.state.username}/>
+				<form onSubmit={this.handleSubmit.bind(this)}>
+					<input 
+					type="text" 
+					placeholder="username" 
+					onChange={this.login.bind(this)} 
+					value={this.state.username}/>
 					<button>Login</button>
-
 				</form>
 			</div>
 

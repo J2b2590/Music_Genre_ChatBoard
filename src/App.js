@@ -14,22 +14,17 @@ class App extends Component {
     super()
 
     this.state = {
-      users: [],
-      rooms: [],
-      messages: [],
-      logged: false,
-      currentUser: {},
-      page: 'login'     
+      users: [], //these users are the users in the same room as the currentuser
+      rooms: [], // all of the rooms
+      messages: [], //messages in the room the current user is in
+      currentUser: {}, //this is the current user 
+      page: LOGIN_PAGE //this controls what page the user sees     
     }
   }
 
-  UserLogin = (username)=>{
-    this.setState({
-      page: ROOMS_PAGE,
-      currentUser: { username: username }
-    });
-  }
-
+  //these are events the server iniaites 
+  // the app has to be re rendered when we get the new data
+  // calling setState causes react to call render
   componentDidMount(){
     socket.on('users', (users)=>{
       this.setState({users: users})
@@ -41,7 +36,15 @@ class App extends Component {
       this.setState({rooms: rooms})
     })
   }
-
+//this is the user login 
+  userLogin(username){
+    socket.emit('addUser', username) //no response right away because of sockets but eventually the server will emit rooms event with rooms data
+    this.setState({
+      page: ROOMS_PAGE, //after you login you go to rooms page
+      currentUser: { username: username }
+    });
+  }
+//user joined a room
   joinRoom(room){
     socket.emit('joinRoom', this.state.currentUser.username, room )
     this.setState({
@@ -49,10 +52,11 @@ class App extends Component {
       page: CHATROOM_PAGE
     })
   }
-
+//got back button 
   goBack(){
     this.setState({page: ROOMS_PAGE})
   }
+// logout button
   logout(){
     this.setState({page: LOGIN_PAGE})
   }
@@ -62,7 +66,7 @@ class App extends Component {
     // the app component is deciding which page to render.(more than 2 options. the other was tererny operator only 2 options)
     let page;
     if(this.state.page == LOGIN_PAGE){
-      page = <Login UserLogin={this.UserLogin}/>
+      page = <Login userLogin={this.userLogin.bind(this)}/>
     }else if(this.state.page == ROOMS_PAGE){
       page = <Rooms currentUser={this.state.currentUser} joinRoom={this.joinRoom.bind(this)} rooms={this.state.rooms} logOut={this.logout.bind(this)}/>
     }else if(this.state.page == CHATROOM_PAGE){
