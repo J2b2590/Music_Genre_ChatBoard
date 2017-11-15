@@ -65,11 +65,11 @@ class App extends Component {
   render() {
     // the app component is deciding which page to render.(more than 2 options. the other was tererny operator only 2 options)
     let page;
-    if(this.state.page == LOGIN_PAGE){
+    if(this.state.page === LOGIN_PAGE){
       page = <Login userLogin={this.userLogin.bind(this)}/>
-    }else if(this.state.page == ROOMS_PAGE){
+    }else if(this.state.page === ROOMS_PAGE){
       page = <Rooms currentUser={this.state.currentUser} joinRoom={this.joinRoom.bind(this)} rooms={this.state.rooms} logOut={this.logout.bind(this)}/>
-    }else if(this.state.page == CHATROOM_PAGE){
+    }else if(this.state.page === CHATROOM_PAGE){
       page = <ChatRoom room={this.state.currentRoom} users={this.state.users} messages={this.state.messages} currentUser={this.state.currentUser} goBack={this.goBack.bind(this)}/>
     }
     return (

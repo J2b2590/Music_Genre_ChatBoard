@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {socket} from '../index.js'
+import './Rooms.css'
 
 export class Rooms extends Component{
-	constructor(props){
-		super(props);
-	}
+	
 
 	render(){
 		const rooms = this.props.rooms.map((room,i)=>{
