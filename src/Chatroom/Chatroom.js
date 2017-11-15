@@ -29,6 +29,7 @@ class ChatRoom extends Component{
 
 	render(){
 		const users = this.props.users.map((user, i) => {
+			
 			return <li key={i}>{user.username}</li>
 		})
 

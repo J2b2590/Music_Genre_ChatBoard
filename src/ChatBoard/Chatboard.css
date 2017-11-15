@@ -1,0 +1,9 @@
+.ChatBoard-container{
+	background-color: blue;
+}
+
+
+.ChatBoard-container .author{
+
+	color: rgb(36, 222, 174);
+}
