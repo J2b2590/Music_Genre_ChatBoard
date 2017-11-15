@@ -24,9 +24,6 @@ export class Login extends Component {
 		socket.emit('addUser', this.state.username)
 		this.props.UserLogin(this.state.username)
 	}
-
-	
-
 	
 	render(){
 		return(
