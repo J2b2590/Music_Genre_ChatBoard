@@ -34,6 +34,7 @@ class ChatRoom extends Component{
 				<form onSubmit={this.onSubmit.bind(this)}>
 					<input />
 				</form>
+				<button onClick={this.props.goBack}>Back</button>
 			</div>
 			)
 		

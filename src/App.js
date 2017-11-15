@@ -8,8 +8,6 @@ const  LOGIN_PAGE = 'login'
 const  ROOMS_PAGE = 'rooms'
 const  CHATROOM_PAGE = 'chatroom'
 
-console.log(socket)
-
 class App extends Component {
 
   constructor(){
@@ -17,6 +15,7 @@ class App extends Component {
 
     this.state = {
       users: [],
+      rooms: [],
       messages: [],
       logged: false,
       currentUser: {},
@@ -32,14 +31,14 @@ class App extends Component {
   }
 
   componentDidMount(){
-    socket.on('message', (data)=>{
-      console.log(data)
-    })
     socket.on('users', (users)=>{
       this.setState({users: users})
     })
     socket.on('messages',(messages)=>{
       this.setState({messages: messages})
+    })
+    socket.on('rooms', (rooms)=>{
+      this.setState({rooms: rooms})
     })
   }
 
@@ -51,6 +50,13 @@ class App extends Component {
     })
   }
 
+  goBack(){
+    this.setState({page: ROOMS_PAGE})
+  }
+  logout(){
+    this.setState({page: LOGIN_PAGE})
+  }
+
 
   render() {
     // the app component is deciding which page to render.(more than 2 options. the other was tererny operator only 2 options)
@@ -58,9 +64,9 @@ class App extends Component {
     if(this.state.page == LOGIN_PAGE){
       page = <Login UserLogin={this.UserLogin}/>
     }else if(this.state.page == ROOMS_PAGE){
-      page = <Rooms currentUser={this.state.currentUser} joinRoom={this.joinRoom.bind(this)}/>
+      page = <Rooms currentUser={this.state.currentUser} joinRoom={this.joinRoom.bind(this)} rooms={this.state.rooms} logOut={this.logout.bind(this)}/>
     }else if(this.state.page == CHATROOM_PAGE){
-      page = <ChatRoom room={this.state.currentRoom} users={this.state.users} messages={this.state.messages} currentUser={this.state.currentUser}/>
+      page = <ChatRoom room={this.state.currentRoom} users={this.state.users} messages={this.state.messages} currentUser={this.state.currentUser} goBack={this.goBack.bind(this)}/>
     }
     return (
       <div className="App">

@@ -18,7 +18,6 @@ export class Login extends Component {
 	}
 
 	handleSubmit = (e) =>{
-		console.log(e, 'handleSubmit')
 		e.preventDefault();
 
 		socket.emit('addUser', this.state.username)

@@ -4,25 +4,14 @@ import {socket} from '../index.js'
 export class Rooms extends Component{
 	constructor(props){
 		super(props);
-		this.state = {
-			rooms: []
-		}
-	}
-
-	componentDidMount(){
-		const state = this.state;
-		socket.on('rooms', (rooms)=>{
-			state.rooms = rooms;
-			this.setState(state)
-		})
 	}
 
 	render(){
-		const rooms = this.state.rooms.map((room,i)=>{
-			return <li 
+		const rooms = this.props.rooms.map((room,i)=>{
+			return <button
 				key={i}
 				onClick={()=>{this.props.joinRoom(room)}}>{room.room}
-				</li>
+			</button>
 		})
 
 		return(
@@ -31,6 +20,7 @@ export class Rooms extends Component{
 				<ul>
 					{rooms}
 				</ul>
+				<button onClick={this.props.logOut}>Logout</button>
 			</div>
 		)
 	}
