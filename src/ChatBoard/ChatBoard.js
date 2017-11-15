@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 
-export class ChatBoard extends Component {
+ class ChatBoard extends Component {
 	constructor(props){
 		super(props);
-		this.state = {
-			messageValue: ''
-
-		}
 	}
 
 
 	render(){
+			const messages = this.props.messages.map((message,i ) => {
+			return <div key={i}><span className="author">{message.username}: </span>{message.text}</div>
+		})
 		return(
-		<div>"I am the Chat Board where you type the messages"</div>
+			<div>
+					{messages}
+			</div>
 			)
 	}
 }
 
+export default ChatBoard;

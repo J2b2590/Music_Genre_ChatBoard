@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {socket} from '../index.js'
+import ChatBoard from '../ChatBoard/ChatBoard.js'
 
 class ChatRoom extends Component{
 	constructor(props){
@@ -20,9 +21,7 @@ class ChatRoom extends Component{
 		const users = this.props.users.map((user, i) => {
 			return <li key={i}>{user.username}</li>
 		})
-		const messages = this.props.messages.map((message,i ) => {
-			return <div key={i}><span className="author">{message.username}: </span>{message.text}</div>
-		})
+
 
 		return(
 			<div> 
@@ -30,9 +29,8 @@ class ChatRoom extends Component{
 				<ul>
 					{users}
 				</ul>
-				<div>
-					{messages}
-				</div>
+				<ChatBoard messages={this.props.messages}/>
+			
 				<form onSubmit={this.onSubmit.bind(this)}>
 					<input />
 				</form>
