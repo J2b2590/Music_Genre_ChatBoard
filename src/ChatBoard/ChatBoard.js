@@ -3,7 +3,11 @@ import React, { Component } from 'react';
  class ChatBoard extends Component {
 	constructor(props){
 		super(props);
+
+		
 	}
+
+
 
 
 	render(){
