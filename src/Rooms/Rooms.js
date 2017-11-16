@@ -16,11 +16,11 @@ export class Rooms extends Component{
 
 		return(
 			<div >
-				<h1>Welcome, choose a music genre chatroom</h1>
+				<h1 class="roomTitle">Welcome, choose a music genre chatroom</h1>
 				<ul>
 					<li>{rooms}</li>
 				</ul>
-				<button onClick={this.props.logOut}>Logout</button>
+				<button class="waves-effect waves-light btn" onClick={this.props.logOut}>Logout</button>
 			</div>
 		)
 	}

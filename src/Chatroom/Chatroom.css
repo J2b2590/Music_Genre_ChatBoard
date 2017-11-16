@@ -1,5 +1,6 @@
 .roomName{
 	color: rgb(36, 222, 174);
+	
 }
 .scrollbar{
 	margin-left: 30px;
@@ -10,10 +11,7 @@
 	overflow-y: scroll;
 	margin-bottom: 25px;
 	max-height: 300px;
-<<<<<<< HEAD
-=======
 
->>>>>>> 9b7dfd2b41543037fc7eb1c0c77f872e42c0d660
 }
 .users{
 	border: 3px solid grey;
