@@ -26,7 +26,6 @@ export class Login extends Component {
 			<div class="loginpage">
 				<div class="loginpage-overlay">
 				<h1 class="app-title">Music Chat Room</h1>
-				<h5 class="app-page">User Name</h5>
 					<form onSubmit={this.handleSubmit.bind(this)}>
 						<div class="textbox">
 							<input class="login-input"
