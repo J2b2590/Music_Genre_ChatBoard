@@ -1,0 +1,38 @@
+.loginpage {
+	background-image: url(https://www.morrisonhotelgallery.com/images/big/Keith%20Coors_Web980px.jpg);
+	background-size:  cover;
+	background-position: center center;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	height: 100vh;
+	z-index: 1;
+
+
+}
+.loginpage-overlay{
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	height: 100vh;
+	z-index: -5;
+}
+.app-title {
+	color: white;
+}
+.app-page{
+	color: white;
+}
+.login-input {
+	color: white;
+	width: 50%;
+	position: center;
+}
+.textbox{
+	width: 50%;
+	margin: 40px auto;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+	font-size: 3rem;
+	position: center;
+}

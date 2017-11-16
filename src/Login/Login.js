@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {socket} from "../index.js";
+import './Login.css';
 
 export class Login extends Component {
 
@@ -22,16 +23,21 @@ export class Login extends Component {
 	
 	render(){
 		return(
-			<div>
-				<h5>User Name</h5>
-				<form onSubmit={this.handleSubmit.bind(this)}>
-					<input 
-					type="text" 
-					placeholder="username" 
-					onChange={this.login.bind(this)} 
-					value={this.state.username}/>
-					<button>Login</button>
-				</form>
+			<div class="loginpage">
+				<div class="loginpage-overlay">
+				<h1 class="app-title">Music Chat Room</h1>
+				<h5 class="app-page">User Name</h5>
+					<form onSubmit={this.handleSubmit.bind(this)}>
+						<div class="textbox">
+							<input class="login-input"
+							type="text" 
+							placeholder="username" 
+							onChange={this.login.bind(this)} 
+							value={this.state.username}/>
+							</div>
+						<button>Login</button>
+					</form>
+				</div>
 			</div>
 
 
