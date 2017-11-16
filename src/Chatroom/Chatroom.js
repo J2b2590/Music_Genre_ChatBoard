@@ -41,7 +41,7 @@ class ChatRoom extends Component{
 			<div class='row'> 
 				<h1 class='roomName'>{this.props.room.room}</h1>
 					<div class="col s6 users scrollbar" id="style-default" >
-						<h5>Users in the room</h5>
+						<h5>Users in this Chat Room</h5>
 						<ul>
 							{users}
 						</ul>
