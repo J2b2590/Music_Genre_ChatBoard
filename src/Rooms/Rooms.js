@@ -7,7 +7,7 @@ export class Rooms extends Component{
 
 	render(){
 		const rooms = this.props.rooms.map((room,i)=>{
-			return <div className="col s3 room-container"
+			return <div className="col s2 room-container"
 				key={i}
 				id={room.room}
 				onClick={()=>{this.props.joinRoom(room)}}><li className="text"><span>{room.room}</span></li>

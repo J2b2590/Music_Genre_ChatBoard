@@ -1,28 +1,51 @@
 #Rock{
-	color: rgba(65,105,225,.1);
-	width: 100%;
-	height: 250px;
-
-	background-image: url(/images/*);
+	
+	color: rgba(160,82,45,0);
+	background-image: url(/images/Rock.jpeg);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-position: bottom 5px;
+	background-position: center; 
+	
 	
 
 	
-	// background-position: center;
+	
 	font-size: 100px;
 	
 
 }
 
 
-#Blues:hover{
+#Rock:hover{
 
 	
 	opacity: .7;
-	color: rgba(65,105,225,1);
+	color: rgba(160,82,45,1);
 	font-weight: bold;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 
 }
 
@@ -30,14 +53,14 @@
 
 
 #Blues{
-	color: rgba(65,105,225,.1);
-	width: 100%;
-	height: 250px;
+	color: rgba(65,105,225,0);
+	
 
-	background-image: url(/images/Blues.jpg);
+	background-image: url(/images/Blues.jpeg);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom 5px;
+	
 	
 
 	
@@ -54,6 +77,30 @@
 	opacity: .7;
 	color: rgba(65,105,225,1);
 	font-weight: bold;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 
 }
 
@@ -62,9 +109,8 @@
 
 
 #Metal{
-	color: rgba(169,169,169,.1);
-	width: 100%;
-	height: 250px;
+	color: rgba(169,169,169,0);
+	
 
 	background-image: url(/images/Metal.jpg);
 	background-repeat: no-repeat;
@@ -88,6 +134,30 @@
 	color: rgba(100,100,100,1);
 	font-weight: bold;
 	background-color: black;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 
 	
 
@@ -97,9 +167,9 @@
 
 #Jazz{
 	
-	color: rgba(150,150,200,.1);
-	width: 100%;
-	height: 250px;
+	color: rgba(150,150,200,0);
+	
+
 
 	background-image: url(/images/Jazz.jpg);
 	background-repeat: no-repeat;
@@ -107,6 +177,7 @@
 	background-position: 0%;
 	
 	font-size: 100px;
+
 
 
 
@@ -120,16 +191,148 @@
 
 	
 	opacity: .7;
-	color: rgba(50,26,139,.8);
+	color: rgba(50,26,139,1);
 	font-weight: bold;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 
 	
 
 }
 
+#Funk{
+	
+	color: rgba(160,82,45,0);
+	background-image: url(/images/Funk.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center; 
+	
+	
+
+	
+	
+	font-size: 100px;
+	
+
+}
+
+#Funk:hover{
+
+	
+	opacity: .7;
+	color: rgba(255,108,26,1);
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+
+	
+
+}
+
+#Classical{
+	
+	color: rgba(255, 255, 255, 0);
+	background-image: url(/images/Classical.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center; 
+	
+	
+
+	
+	
+	font-size: 100px;
+	
+
+}
+
+#Classical:hover{
+
+	
+	opacity: .7;
+	color: rgba(186,153,23,1);
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+
+	
+
+}
+
+
+
+
 .text{
 
-	margin-right: 70%;
+	margin-right: 50%;
+	margin-top: 3%;
 
 }
 
@@ -139,9 +342,11 @@
 	
 	
 	border: solid;
-	margin-top: 5px;
-	width: 100%;
-	height: 250px;
+	margin-top: 10px;
+	margin-left: 10%;
+	max-width: 80%;
+	
+	height: 300px;
 	
 }
 
