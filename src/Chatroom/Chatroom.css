@@ -1,0 +1,30 @@
+.roomName{
+	color: rgb(36, 222, 174);
+}
+.scrollbar{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+.users{
+	border: 3px solid grey;
+	border-radius: 30px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 10px 10px 10px #888888;
+
+}
+.messages{
+	border: 3px solid grey;
+	border-radius: 30px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 10px 10px 10px  #888888;
+}
+.chatroom-input{
+	width: 50%;
+	margin: 0 auto;
+}
+

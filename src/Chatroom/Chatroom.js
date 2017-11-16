@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import {socket} from '../index.js'
-import ChatBoard from '../ChatBoard/ChatBoard.js'
+import {socket} from '../index.js';
+import ChatBoard from '../ChatBoard/ChatBoard.js';
+import './Chatroom.css'
+
 
 class ChatRoom extends Component{
 	constructor(props){
@@ -24,7 +26,7 @@ class ChatRoom extends Component{
 	}
 	message(e){
 		this.setState({message: e.target.value})
-		console.log(e.target,'this is message e')
+		console.log(e.target,'this is message')
 	}
 
 
@@ -36,15 +38,19 @@ class ChatRoom extends Component{
 
 
 		return(
-			<div> 
-				<h1>{this.props.room.room}</h1>
-				<ul>
-					{users}
-				</ul>
-				<ChatBoard messages={this.props.messages}/>
-			
-				<form onSubmit={this.onSubmit.bind(this)}>
-					<input value={this.state.message} onChange={this.message.bind(this)} />
+			<div class='row'> 
+				<h1 class='roomName'>{this.props.room.room}</h1>
+					<div class="col s6 users scrollbar" id="style-default" >
+						<h5>Users in the room</h5>
+						<ul>
+							{users}
+						</ul>
+					</div>
+				<div class="col s6 messages">
+					<ChatBoard messages={this.props.messages}/>
+				</div>
+				<form class="chatroom-input"onSubmit={this.onSubmit.bind(this)}>
+					<input placeholder="message" value={this.state.message} onChange={this.message.bind(this)} />
 				</form>
 				<button onClick={this.props.goBack}>Back</button>
 			</div>
