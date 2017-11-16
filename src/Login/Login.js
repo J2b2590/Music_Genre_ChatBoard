@@ -35,7 +35,7 @@ export class Login extends Component {
 							onChange={this.login.bind(this)} 
 							value={this.state.username}/>
 							</div>
-						<button>Login</button>
+						<button class="waves-effect waves-light btn">Login</button>
 					</form>
 				</div>
 			</div>
