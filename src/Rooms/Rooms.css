@@ -5,6 +5,7 @@
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center; 
+
 	
 	
 
@@ -336,15 +337,20 @@
 
 }
 
+body{
+	background-color: rgba(150,150,150,.3);
+}
+
 
 .room-container{
 
 	
 	
-	border: solid;
+	border: thin;
 	margin-top: 10px;
 	margin-left: 10%;
 	max-width: 80%;
+	border-radius: 10px;
 	
 	height: 300px;
 	

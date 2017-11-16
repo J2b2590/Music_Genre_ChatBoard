@@ -9,6 +9,8 @@
 	background: #F5F5F5;
 	overflow-y: scroll;
 	margin-bottom: 25px;
+	max-height: 300px;
+	
 }
 .users{
 	border: 3px solid grey;

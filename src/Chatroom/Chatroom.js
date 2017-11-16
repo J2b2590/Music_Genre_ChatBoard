@@ -46,7 +46,7 @@ class ChatRoom extends Component{
 							{users}
 						</ul>
 					</div>
-				<div class="col s6 messages">
+				<div class="col s6 messages scrollbar">
 					<ChatBoard messages={this.props.messages}/>
 				</div>
 				<form class="chatroom-input"onSubmit={this.onSubmit.bind(this)}>
