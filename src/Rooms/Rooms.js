@@ -7,17 +7,18 @@ export class Rooms extends Component{
 
 	render(){
 		const rooms = this.props.rooms.map((room,i)=>{
-			return <button
+			return <div className="col s3 room-container"
 				key={i}
-				onClick={()=>{this.props.joinRoom(room)}}>{room.room}
-			</button>
+				id={room.room}
+				onClick={()=>{this.props.joinRoom(room)}}><li className="text"><span>{room.room}</span></li>
+			</div>
 		})
 
 		return(
-			<div>
+			<div >
 				<h1>Welcome, choose a music genre chatroom</h1>
 				<ul>
-					{rooms}
+					<li>{rooms}</li>
 				</ul>
 				<button onClick={this.props.logOut}>Logout</button>
 			</div>
