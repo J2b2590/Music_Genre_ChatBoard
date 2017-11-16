@@ -1,5 +1,5 @@
 .roomName{
-	color: rgb(0, 0, 0);
+	color: grey;
 }
 .scrollbar{
 	margin-left: 30px;
@@ -16,6 +16,7 @@
 	border-radius: 30px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 10px 10px 10px #888888;
+	width: 80%;
 
 }
 .messages{
@@ -23,6 +24,7 @@
 	border-radius: 30px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 10px 10px 10px  #888888;
+	width: 80%;
 }
 .chatroom-input{
 	width: 50%;
