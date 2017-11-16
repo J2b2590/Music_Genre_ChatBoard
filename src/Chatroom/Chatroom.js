@@ -53,6 +53,7 @@ class ChatRoom extends Component{
 					<input placeholder="message" value={this.state.message} onChange={this.message.bind(this)} />
 				</form>
 				<button class="waves-effect waves-light btn" onClick={this.props.goBack}>Back</button>
+				
 			</div>
 			)
 		

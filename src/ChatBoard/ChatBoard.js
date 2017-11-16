@@ -9,7 +9,7 @@ import './Chatboard.css'
 
 	render(){
 			const messages = this.props.messages.map((message,i ) => {
-			return <div key={i}><span className="author">{message.username}: </span>{message.text}</div>
+			return <div key={i}><span className="author">{message.username} : </span>{message.text}</div>
 		})
 		return(
 			<div>
