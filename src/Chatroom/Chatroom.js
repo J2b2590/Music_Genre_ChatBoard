@@ -46,13 +46,13 @@ class ChatRoom extends Component{
 							{users}
 						</ul>
 					</div>
-				<div class="col s6 messages">
+				<div class="col s6 messages scrollbar">
 					<ChatBoard messages={this.props.messages}/>
 				</div>
 				<form class="chatroom-input"onSubmit={this.onSubmit.bind(this)}>
 					<input placeholder="message" value={this.state.message} onChange={this.message.bind(this)} />
 				</form>
-				<button onClick={this.props.goBack}>Back</button>
+				<button class="waves-effect waves-light btn" onClick={this.props.goBack}>Back</button>
 			</div>
 			)
 		
