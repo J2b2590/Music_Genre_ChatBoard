@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 
 const io = require('socket.io-client')
-export const socket = io.connect('http://localhost:8080');
+export const socket = io.connect('https://infinite-shore-76668.herokuapp.com/');
 console.log(socket, ' socket index.js')
 
 
