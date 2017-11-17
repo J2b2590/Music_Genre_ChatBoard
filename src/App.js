@@ -16,7 +16,6 @@ class App extends Component {
     this.state = {
       users: [], //these users are the users in the same room as the currentuser
       rooms: [], // all of the rooms
-      messages: [], //messages in the room the current user is in
       currentUser: {}, //this is the current user 
       page: LOGIN_PAGE //this controls what page the user sees     
     }
@@ -29,10 +28,14 @@ class App extends Component {
     socket.on('users', (users)=>{
       this.setState({users: users})
     })
-    socket.on('messages',(messages)=>{
-      this.setState({messages: messages})
-    })
     socket.on('rooms', (rooms)=>{
+      const currentRoom = this.state.currentRoom;
+
+      rooms.forEach((room)=>{
+        if (currentRoom && room.room == currentRoom.room){
+          this.setState({currentRoom: room})
+        }
+      })
       this.setState({rooms: rooms})
     })
   }
@@ -70,7 +73,7 @@ class App extends Component {
     }else if(this.state.page === ROOMS_PAGE){
       page = <Rooms currentUser={this.state.currentUser} joinRoom={this.joinRoom.bind(this)} rooms={this.state.rooms} logOut={this.logout.bind(this)}/>
     }else if(this.state.page === CHATROOM_PAGE){
-      page = <ChatRoom room={this.state.currentRoom} users={this.state.users} messages={this.state.messages} currentUser={this.state.currentUser} goBack={this.goBack.bind(this)}/>
+      page = <ChatRoom room={this.state.currentRoom} users={this.state.users} currentUser={this.state.currentUser} goBack={this.goBack.bind(this)}/>
     }
     return (
       <div className="App">

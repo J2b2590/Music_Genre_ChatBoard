@@ -7,10 +7,9 @@ import './Chatroom.css'
 class ChatRoom extends Component{
 	constructor(props){
 		super(props);
-
+		console.log(props, 'props')
 		this.state = {
 			message: '',
-
 		}
 	}
 
@@ -32,27 +31,28 @@ class ChatRoom extends Component{
 
 	render(){
 		const users = this.props.users.map((user, i) => {
-			
-			return <li key={i}>{user.username}</li>
+			if (user.currentRoom === this.props.room.room){
+				return <li key={i}>{user.username}</li>
+			}	
 		})
 
 
 		return(
-			<div class='row'> 
-				<h1 class='roomName'>{this.props.room.room}</h1>
-					<div class="col s6 users scrollbar" id="style-default" >
+			<div className='row'> 
+				<h1 className='roomName'>{this.props.room.room}</h1>
+					<div className="col s6 users scrollbar" id="style-default" >
 						<h5>Users in this Chat Room</h5>
 						<ul>
 							{users}
 						</ul>
 					</div>
-				<div class="col s6 messages scrollbar">
-					<ChatBoard messages={this.props.messages}/>
+				<div className="col s6 messages scrollbar">
+					<ChatBoard messages={this.props.room.messages}/>
 				</div>
-				<form class="chatroom-input"onSubmit={this.onSubmit.bind(this)}>
+				<form className="chatroom-input" onSubmit={this.onSubmit.bind(this)}>
 					<input placeholder="message" value={this.state.message} onChange={this.message.bind(this)} />
 				</form>
-				<button class="waves-effect waves-light btn" onClick={this.props.goBack}>Back</button>
+				<button className="waves-effect waves-light btn" onClick={this.props.goBack}>Back</button>
 				
 			</div>
 			)

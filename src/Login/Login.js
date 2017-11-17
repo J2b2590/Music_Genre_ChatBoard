@@ -23,18 +23,18 @@ export class Login extends Component {
 	
 	render(){
 		return(
-			<div class="loginpage">
-				<div class="loginpage-overlay">
-				<h1 class="app-title">Music Chat Room</h1>
+			<div className="loginpage">
+				<div className="loginpage-overlay">
+				<h1 className="app-title">Music Chat Room</h1>
 					<form onSubmit={this.handleSubmit.bind(this)}>
-						<div class="textbox">
-							<input class="login-input"
+						<div className="textbox">
+							<input className="login-input"
 							type="text" 
 							placeholder="username" 
 							onChange={this.login.bind(this)} 
 							value={this.state.username}/>
 							</div>
-						<button class="waves-effect waves-light btn">Login</button>
+						<button className="waves-effect waves-light btn">Login</button>
 					</form>
 				</div>
 			</div>
